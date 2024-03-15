@@ -6,10 +6,5 @@ from products.models import Product
 
 
 
-def get_product(request , slug):
-    try:
-        product = Product.objects.get(slug =slug)
-        return render(request  , 'product/product.html' , context = {'product' : product})
-
-    except Exception as e:
-        print(e)
+def products(request):
+    return render(request,'product/products.html')
