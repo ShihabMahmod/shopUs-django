@@ -9,6 +9,7 @@ from .models import *
 
 
 admin.site.register(Category)
+admin.site.register(Brand)
 
 class ProductImageAdmin(admin.StackedInline):
     model =ProductImage
