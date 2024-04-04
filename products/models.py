@@ -16,8 +16,8 @@ class Category(BaseModel):
 
     def __str__(self) -> str:
         return self.category_name
-
-
+    
+ 
 class Brand(BaseModel):
     brand_name = models.CharField(max_length=100)
     slug = models.SlugField(unique=True , null=True , blank=True)
@@ -25,7 +25,7 @@ class Brand(BaseModel):
 
 
     def save(self , *args , **kwargs):
-        self.slug = slugify(self.brand_image)
+        self.slug = slugify(self.brand_name)
         super(Brand ,self).save(*args , **kwargs)
 
 

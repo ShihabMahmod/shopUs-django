@@ -4,8 +4,8 @@ from products.models import Product
 
 
 def index(request):
-    context = {'products' : Product.objects.all()}
-    return render(request , 'home/index.html' , context)
+    products = Product.objects.all()
+    return render(request , 'home/index.html',{'products': products})
 
 def about(request):
     return render(request,'about/about.html')

@@ -7,4 +7,4 @@ from products.models import Product
 
 
 def products(request):
-    return render(request,'product/products.html')
+    return render(request,'product/products.html',{'products': products})
